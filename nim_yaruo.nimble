@@ -8,5 +8,5 @@ srcDir        = "src"
 
 # Dependencies
 
-requires "nim >= 0.17.2"
+requires "nim >= 0.17.2", "memo < 0.2.1"
 

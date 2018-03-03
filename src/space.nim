@@ -1,4 +1,4 @@
-import unicode, strutils, math
+import unicode, strutils, memo
 type 
   SpacesSet = tuple[a: int, h: int, adj: int]
 
@@ -87,7 +87,7 @@ proc adj_to_a_h (ah:SpacesSet): SpacesSet =
     res.adj = 0
   return res
 
-proc width_space (sp: int): string =
+proc width_space (sp: int): string {.memoized.} =
   let modded = sp mod 11
   var ah:SpacesSet
   ah.a = 0
